@@ -49,9 +49,7 @@ router.post('/clients', function(req, res, next) {
    req.body.userprofileimage = "http://localhost:3001/images/" + req.body.email.split('@')[0] + '.jpg';
  }
 
-
   Client.create(req.body).then(function(client) {
-
 
     // var imgData = client.userprofileimage;
     // var base64Data = imgData.split("base64,")[1];
