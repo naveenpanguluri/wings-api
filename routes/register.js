@@ -1,3 +1,5 @@
+/*jshint esnext: true */
+
 var express = require('express');
 var router = express.Router();
 var Register = require('../models/Register');
@@ -27,7 +29,7 @@ router.post('/registerUser', function(req, res, next) {
 
     // res.status(200).send(client);
 
-  }).catch(function(error) {
+  }).catch((error) => {
     console.log('error', error);
     res.status(400).send(error);
   });
